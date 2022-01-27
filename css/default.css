@@ -203,7 +203,7 @@ a:hover::after{
         /* 横並びにする */
         display: flex;
         /* 背景の設定 */
-        background-color: Menu;
+        background-color: white;
         /* 高さの設定 */
         height: 50px;
         /* 余白の設定 */
