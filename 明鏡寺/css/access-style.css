@@ -1,0 +1,29 @@
+
+/* アイテムブロックのスタイリング */
+.nav-item{
+    list-style-type: none;
+    flex: 1;
+    padding: 0;
+    margin: 0px;
+}
+.content{
+    text-align: center;
+    margin: auto; padding: 0;
+}
+.item-external{
+    display: inline-block;
+}
+.gmap {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    margin: 10px;
+}
+.gmap iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
