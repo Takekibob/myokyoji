@@ -1,0 +1,27 @@
+/* アイテムブロックのスタイリング */
+.item{
+    padding: 0;
+    margin: 0px;
+    width: 15%;
+    display: inline-block;
+}
+.content{
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+}
+.item2{
+    display: inline-block;
+    text-align: left;
+}
+.item-external{
+    display: inline-block;
+}
+
+/* 間隔がゼロ */
+.zerointerval{
+    margin: 0;
+    padding: 0;
+}
+@media screen and (max-width: 768px) {
+}

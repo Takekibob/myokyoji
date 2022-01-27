@@ -1,0 +1,255 @@
+body{
+    /* フォントの設定 */
+    font-family: “STKaiti”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, serif;
+    /* 中心寄せの設定 */
+    margin: auto;
+    text-align: center;
+    /* 背景の画像を設定 */
+    background-image: url(../img/背景.png);
+    /* 標準の文字の大きさ設定 */
+    font-size: 16px;
+}
+/* ヘッダーのスタイリング */
+header{
+    margin: 40px 0 40px 0;
+    /* 横幅100% */
+    width: 100%;
+}
+aside{
+    display: none;
+}
+/* メインのスタイリング */
+main{
+    /* 最大幅1200px */
+    max-width: 1200px;
+    /* 中心寄せ */
+    margin: auto;
+    text-align: center;
+}
+/* フッターのスタイリング */
+footer{
+    /* 最大幅1200px */
+    max-width: 1200px;
+    /* 中心寄せ */
+    margin: auto;
+    text-align: center;
+    /* padding-topを30pxに設定 */
+    padding-top: 30px;
+    /* 文字の色は白に */
+    color: white;
+    /* 背景色の決定 */
+    background-color:rgba(27,68,103, 1);
+}
+
+/* 間隔がゼロ */
+.zerointerval{
+    margin: 0;
+    padding: 0;
+}
+
+/* タイトルのスタイリング */
+.title{
+    /* 下のmarginの設定 */
+    margin-bottom: 20px;
+}
+.title > a{
+    text-decoration: none;
+    color: black;
+}
+
+/* 上タブメニューのスタイリング */
+a{
+    padding-bottom: 3px;
+    position: relative;
+    transition: .3s;
+    text-decoration: none;
+}
+a::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #31aae2;
+    transition: .3s;
+    transform: translateX(-50%);
+}
+a:hover::after{
+    width: 100%;
+}
+.topnav {
+    width: 80%;
+    margin: auto;
+    height: 1.5rem;
+    display: flex;
+    font-size: 14px;
+    padding-left: 0px;
+}
+.topnav li{
+    /* 余白の設定 */
+    padding: 0;
+    margin-top: 10px;
+    /* レイアウトの設定 */
+    flex: 1;
+    /* リストのスタイリング */
+    list-style-type: none;
+}
+.topnav  li  a{
+    color: black;
+}
+.topnav  li  a:hover{
+    text-shadow: 0.5px 0.5px black;
+}
+.topnav-children{
+    /* ポジションはrelativeにする（浮かせるため） */
+    position: relative;
+    top: 3px;
+    /* 背景の色を決定する */
+    background-color: rgb(255, 247, 227);
+    /* 0.3秒でトランジションの開始 */
+    transition: .3s;
+    /* 初めは隠しておく */
+    height: 0;
+    overflow: hidden;
+    /* 文字は中心寄せにする */
+    margin: auto;
+    text-align: center;
+    /* リストスタイル分のpaddingを0にする */
+    padding-left: 0;
+    /* 最大幅を設定 */
+    max-width: 150px;
+}
+.topnav li:hover > ul {
+    height: 5.5rem;
+    overflow: visible;
+    box-shadow: 1px 1px;
+}
+
+/* 下タブメニューのスタイリング */
+.bottonnav{
+    display: flex;
+    padding-left: 0%;
+}
+.bottonnav li{
+    flex: 1;
+    list-style-type: none;
+}
+.a-botton{
+    color: aliceblue;
+    font-size: 14px;
+}
+.a-botton:hover{
+    padding-bottom: 3px;
+    text-shadow: 0.5px 0.5px aliceblue;
+}
+.telephone{
+    color: Highlight;
+    text-decoration:underline;
+}
+.telephone:hover::after{
+    width: 0%;
+}
+@media screen and (max-width: 768px) {
+    body{
+        font-size: 14px;
+    }
+    header{
+        margin: 20px 0 20px 0;
+    }
+    main{
+        width: 90%;
+    }
+    aside{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+    }
+    footer{
+        padding-top: 10px;
+        width: 95%;
+    }
+    nav{
+        display: none;
+    }
+    a:hover::after{
+        width: 0%;
+    }
+    .scroll-img{
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    .scroll-img img{
+        display: inline-block;
+        margin: 10px;
+    }
+    img{
+        width: 80%;
+    }
+    .mini-bottonnav{
+         /* 浮かせる */
+        position: fixed;
+        z-index: 4;
+        /* 横並びにする */
+        flex-direction: row;
+        /* 下の位置に固定 */
+        bottom: 0;
+        /* 横幅の設定 */
+        width: 100%;
+        /* 空白を等しく */
+        justify-content: space-evenly;
+        /* 横並びにする */
+        display: flex;
+        /* 背景の設定 */
+        background-color: Menu;
+        /* 高さの設定 */
+        height: 50px;
+        /* 余白の設定 */
+        padding: 0;
+        margin: 0;
+        /* 文字の大きさの設定 */
+        font-size: 13px;
+    }
+    .mini-bottonnav a{
+        flex: 1;
+        z-index: 4;
+
+        /* 余白の設定 */
+        padding-top: 3px;
+        /* スタイルは消す */
+        list-style-type: none;
+        /* リストスタイル分のpaddingを0にする */
+        padding-left: 0;
+        border-left: 0.5px solid gray;
+    }
+    .mini-bottonnav > a > li{
+        color: gray;
+    }
+    .active{
+        border-top: 2px solid red;
+    }
+    .no-active{
+        border-top: 0.5px solid gray;
+    }
+    /* smallタグの大きさを小さくする */
+    small{
+        padding-bottom: 55px;
+        font-size: 6px;
+    }
+}
+@media screen and (max-width: 330px) {
+    footer{
+        margin: 18px;
+    }
+    body{
+        font-size: 12px;
+    }
+    .name{
+        display: none;
+    }
+    .mini-bottonnav{
+        height: 37px;
+    }
+}

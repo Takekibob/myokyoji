@@ -1,0 +1,50 @@
+.about{
+    display: flex;
+}
+.about-item{
+    flex: 1;
+    margin: 5px;
+}
+.guide{
+    display: flex;
+}
+.guide-item{
+    flex: 1;
+    margin: 5px;
+}
+.external{
+    display: flex;
+}
+.item-external{
+    flex: 1;
+}
+@media screen and (max-width: 768px) {
+    .about{
+        width: 90%;
+        display: inline-block;
+    }
+    .guide-content{
+        display: none;
+    }
+    .external{
+        display: block;
+    }
+    .map{
+        display: none;
+    }
+    .scroll-img{
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    .scroll-img img{
+        display: inline-block;
+        padding: 5px;
+    }
+
+}
+@media screen and (max-width: 370px) {
+    .item-external{
+        display: none;
+    }
+}
